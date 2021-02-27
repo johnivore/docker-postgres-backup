@@ -43,7 +43,7 @@ else
     HEALTHCHECKS_FLAG=""
 fi
 
-if [ ! -z $BACKUP_AT_BOOT ]; then
+if [ ! -z $BACKUP_AT_BOOT ] && [ "$BACKUP_AT_BOOT" == "true" ]; then
     BACKUP_AT_BOOT_FLAG="--backup-at-boot"
 else
     BACKUP_AT_BOOT_FLAG=""
