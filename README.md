@@ -1,6 +1,6 @@
 # docker-postgres-backup
 
-A simple, multi-arch Docker image to make full backups of Postgresql servers.  All recent Postgresql versions are supported.
+A simple, multi-arch Docker image that makes full Postgresql backups.  All recent Postgresql versions are supported.
 
 * Git repo: <https://gitlab.com/johnivore/docker-postgresl-backup>
 * Dockerhub: <https://hub.docker.com/r/johnivore/postgres-backup/>

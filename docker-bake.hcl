@@ -1,7 +1,7 @@
 # see https://www.postgresql.org/support/versioning/ for Postgresql lifecycle policy
 
 variable "PGBACKUP_VERSION" {
-    default = "1.0"
+    default = "1.0.0"
 }
 
 group "default" {
