@@ -1,11 +1,14 @@
 # docker-postgresl-backup
 
-A multi-arch Docker image to run simple backups of Postgresql, supporting several Postgresql versions.
+A simple, multi-arch Docker image to make full backups of Postgresql servers.  All recent Postgresql versions are supported.
+
+* Git repo: <https://gitlab.com/johnivore/docker-postgresl-backup>
+* Dockerhub: <https://hub.docker.com/r/johnivore/postgres-backup/>
 
 
-## Configuration
+## Usage
 
-Example `docker-compose.yml`:
+### Example docker-compose
 
 ```yaml
 services:
@@ -24,6 +27,9 @@ services:
       - "BACKUP_KEEP_DAYS=30"                       # default: 7
       - "HEALTHCHECKS_URL=https://hc.example.com/ping/..."  # default: empty
 ```
+
+
+## Configuration
 
 ### Volume ownership
 
