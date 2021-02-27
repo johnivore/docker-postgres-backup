@@ -1,4 +1,4 @@
-# docker-postgresl-backup
+# docker-postgres-backup
 
 A simple, multi-arch Docker image to make full backups of Postgresql servers.  All recent Postgresql versions are supported.
 
@@ -13,6 +13,7 @@ A simple, multi-arch Docker image to make full backups of Postgresql servers.  A
 ```yaml
 services:
   pgbackup:
+    image: johnivore/13-alpine-latest
     container_name: "pgbackup"
     restart: "unless-stopped"
     volumes:
@@ -27,6 +28,11 @@ services:
       - "BACKUP_KEEP_DAYS=30"                       # default: 7
       - "HEALTHCHECKS_URL=https://hc.example.com/ping/..."  # default: empty
 ```
+
+
+## Docker tags and Postgresql versions
+
+The first number in the Docker tag is the version of Postgresql; the last number is the version of docker-postgres-backup.  For example, the tag `13-alpine-1.0` indicates Postgresql version 13, docker-postgres-backup version 1.0.
 
 
 ## Configuration
