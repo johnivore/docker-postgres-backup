@@ -13,7 +13,7 @@ A simple, multi-arch Docker image that makes full Postgresql backups.  All recen
 ```yaml
 services:
   pgbackup:
-    image: johnivore/13-alpine-latest
+    image: johnivore/postgres-backup:13-alpine-latest
     container_name: "pgbackup"
     restart: "unless-stopped"
     volumes:
