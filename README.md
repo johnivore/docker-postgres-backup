@@ -53,7 +53,7 @@ Backups older than `BACKUP_KEEP_DAYS` are deleted.  (Set to `0` to keep forever.
 
 ### Healthchecks support
 
-Set `HEALTHCHECKS_URL` to your [https://healthchecks.io/](healthchecks) URL.
+Set `HEALTHCHECKS_URL` to your [healthchecks](https://healthchecks.io/) URL.
 
 
 ## License
