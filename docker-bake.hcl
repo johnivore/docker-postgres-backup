@@ -1,11 +1,18 @@
 # see https://www.postgresql.org/support/versioning/ for Postgresql lifecycle policy
 
 variable "PGBACKUP_VERSION" {
-    default = "1.0.0"
+    default = "1.0.1"
 }
 
 group "default" {
-	targets = ["13-alpine", "12-alpine", "11-alpine", "10-alpine", "9.6-alpine"]
+	targets = ["14-alpine", "13-alpine", "12-alpine", "11-alpine", "10-alpine"]
+}
+
+target "14-alpine" {
+	dockerfile = "Dockerfile"
+	platforms = ["linux/amd64", "linux/arm64", "linux/arm/v7"]
+    args = {"PGVERSION" = "14"}
+    tags = ["johnivore/postgres-backup:14-alpine-${PGBACKUP_VERSION}", "johnivore/postgres-backup:14-alpine-latest"]
 }
 
 target "13-alpine" {
@@ -34,11 +41,4 @@ target "10-alpine" {
 	platforms = ["linux/amd64", "linux/arm64", "linux/arm/v7"]
     args = {"PGVERSION" = "10"}
     tags = ["johnivore/postgres-backup:10-alpine-${PGBACKUP_VERSION}", "johnivore/postgres-backup:10-alpine-latest"]
-}
-
-target "9.6-alpine" {
-	dockerfile = "Dockerfile"
-	platforms = ["linux/amd64", "linux/arm64", "linux/arm/v7"]
-    args = {"PGVERSION" = "9.6"}
-    tags = ["johnivore/postgres-backup:9.6-alpine-${PGBACKUP_VERSION}", "johnivore/postgres-backup:9.6-alpine-latest"]
 }

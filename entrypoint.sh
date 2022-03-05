@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Copyright 2021 John Begenisich
+# Copyright 2022 John Begenisich
 
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
